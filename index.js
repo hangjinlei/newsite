@@ -12,12 +12,12 @@ function menu() {
         alert("屏幕尺寸过窄，菜单可能无法完全显示!");
         return;
     }
-    var List = document.getElementById("menuList");
-    var Icon = document.getElementById("menuIcon");
-    if (List.className == "menuList")
-        showMenuList(List, Icon);
+    var menu = document.getElementById("menu");
+    var openMenu = document.getElementById("openMenu");
+    if (menu.className == "menu")
+        showMenuList(menu, openMenu);
     else
-        hideMenuList(List, Icon);
+        hideMenuList(menu, openMenu);
 }
 
 function setContent() {
@@ -26,14 +26,14 @@ function setContent() {
     content.style.height = innerHeight - 50 + "px";
 }
 
-function showMenuList(List, Icon) {
-    List.className = "menuList show";
-    Icon.className = "menuIcon down";
+function showMenuList(menu, openMenu) {
+    menu.className = "menu show";
+    openMenu.className = "openMenu down";
 }
 
-function hideMenuList(List, Icon) {
-    var List = document.getElementById("menuList");
-    var Icon = document.getElementById("menuIcon");
-    List.className = "menuList";
-    Icon.className = "menuIcon";
+function hideMenuList(menu, openMenu) {
+    var menu = document.getElementById("menu");
+    var openMenu = document.getElementById("openMenu");
+    menu.className = "menu";
+    openMenu.className = "openMenu";
 }

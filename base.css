@@ -89,13 +89,8 @@ header .headpic img {
     background-size: contain; */
 }
 
-#menuList a {
-    display: block;
-    width: 100%;
-    color: #000;
-    overflow: hidden;
-    text-align: left;
-}
+
+/* 小于172px - title 宽度 */
 
 @media screen and (max-width: 172px) {
     header .title {
@@ -103,29 +98,32 @@ header .headpic img {
     }
 }
 
+
+/* 小于200px - 不显示菜单 */
+
 @media screen and (max-width: 200px) {
-    .menuList {
+    .menu {
         display: none;
     }
 }
 
-header .menuIcon {
+header .openMenu {
     width: 50px;
     height: 50px;
 }
 
-header .menuIcon svg {
+header .openMenu svg {
     fill: currentColor;
     color: #fff;
     transition: all .5s;
 }
 
-header .menuIcon svg:hover {
+header .openMenu svg:hover {
     background-color: #004d88;
     cursor: pointer;
 }
 
-.menuList {
+.menu {
     position: fixed;
     left: 0;
     width: 0;
@@ -137,47 +135,74 @@ header .menuIcon svg:hover {
     transition: all .2s;
 }
 
-.menuList.show {
+.menu.show {
     opacity: 1;
+    height: 0;
     /* 显示时的动画 */
     transition: all .5s;
     background-color: #fff;
 }
 
-.menuHeader {
+.hideMenu {
+    width: 50px;
     height: 50px;
 }
 
-.menuHeader svg {
+.hideMenu svg {
     fill: currentColor;
-    z-index: 2;
     transition: all .5s;
 }
 
-.menuHeader svg:hover {
+.hideMenu svg:hover {
     fill: currentColor;
-    z-index: 2;
     cursor: pointer;
+}
+
+
+/* 菜单 */
+
+.menuList {
+    display: flex;
+}
+
+.menuList a {
+    display: block;
+    width: 120px;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
 }
 
 
 /* 小于540px */
 
 @media screen and (max-width: 540px) {
-    .menuList {
-        top: 0;
-    }
-    .menuList.show {
+    .menu.show {
         top: 0;
         width: 200px;
         height: 100%;
     }
-    .menuHeader svg {
+    .hideMenu svg {
         color: #000;
     }
-    .menuHeader svg:hover {
+    .hideMenu svg:hover {
         background-color: #004d88;
         color: #fff;
+    }
+    .menuList {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menuList a {
+        display: block;
+        width: auto;
+        height: 32px;
+        line-height: 32px;
+    }
+    .menuList a img {
+        display: none;
     }
 }
 
@@ -185,18 +210,22 @@ header .menuIcon svg:hover {
 /* 大于540px */
 
 @media screen and (min-width: 540px) {
-    .menuIcon.down {
+    .openMenu.down {
         background-color: #004d88;
     }
-    .menuList {
+    .menu.show {
         top: 50px;
+        width: 480px;
+        height: auto;
+        overflow: auto;
     }
-    .menuList.show {
-        top: 50px;
-        width: 540px;
-        height: 300px;
-    }
-    .menuHeader {
+    .hideMenu {
         display: none;
+    }
+    .menuList {
+        flex-direction: row;
+    }
+    .menuList a img {
+        width: 100%;
     }
 }

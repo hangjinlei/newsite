@@ -13,9 +13,9 @@
 </head>
 
 <body id="index">
-    <div class="container" id="container">
+    <div id="container" class="container">
         <header>
-            <div class="menuIcon" id="menuIcon" onclick="menu();">
+            <div id="openMenu" class="openMenu" onclick="menu();">
                 <svg viewBox="0 0 100 100" width="50" height="50">
                     <rect x="20" y="25" width="60" height="10"></rect>
                     <rect x="20" y="45" width="60" height="10"></rect>
@@ -30,23 +30,24 @@
             </div>
         </header>
 
-        <div class="content" id="content" onclick="hideMenuList();">
+        <div id="content" class="content" onclick="hideMenuList();">
 
         </div>
     </div>
 
-    <div id="menuList" class="menuList">
-        <div class="menuHeader" id="menuHeader" onclick="menu();">
+    <div id="menu" class="menu">
+        <div id="hideMenu" class="hideMenu" onclick="menu();">
             <svg viewBox="0 0 100 100" width="50" height="50">
                 <rect x="20" y="25" width="60" height="10"></rect>
                 <rect x="20" y="45" width="60" height="10"></rect>
                 <rect x="20" y="65" width="60" height="10"></rect>
             </svg>
         </div>
-        <div>
-            <a href="#">你好1</a>
-            <a href="#">你好1</a>
-            <a href="#">你好1</a>
+        <div id="menuList" class="menuList">
+            <a href="#"><img src="images/logo.png" alt="首页">首页</a>
+            <a href="#"><img src="images/logo.png" alt="音乐">音乐</a>
+            <a href="#"><img src="images/logo.png" alt="视频">视频</a>
+            <a href="#"><img src="images/logo.png" alt="关于">关于</a>
         </div>
     </div>
 </body>
