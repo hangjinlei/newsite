@@ -169,7 +169,35 @@ header .openMenu svg:hover {
         color: #0078D4;
         background-color: #F3F2F1;
     }
-    #index .page a {
+    #video #menuList #video {
+        color: #0078D4;
+        background-color: #F3F2F1;
+    }
+    #music #menuList #music {
+        color: #0078D4;
+        background-color: #F3F2F1;
+    }
+    #about #menuList #about {
+        color: #0078D4;
+        background-color: #F3F2F1;
+    }
+    #mars2020 #menuList #mars2020 {
+        color: #0078D4;
+        background-color: #F3F2F1;
+    }
+    .page {
+        display: none;
+    }
+    .page {
+        display: none;
+    }
+    .page {
+        display: none;
+    }
+    .page {
+        display: none;
+    }
+    .page {
         display: none;
     }
     .menu.show {
@@ -206,19 +234,29 @@ header .openMenu svg:hover {
 /* 大于600px */
 
 @media screen and (min-width: 600px) {
-    #index .page a {
+    .page a {
         display: none;
+        width: 200px;
+        text-align: center;
         color: #fff;
+    }
+    .page a:hover {
+        cursor: pointer;
     }
     #index .page #index {
         display: block;
     }
-    #index .page a {
-        width: 100px;
-        text-align: center;
+    #video .page #video {
+        display: block;
     }
-    #index .page a:hover {
-        cursor: pointer;
+    #music .page #music {
+        display: block;
+    }
+    #about .page #about {
+        display: block;
+    }
+    #mars2020 .page #mars2020 {
+        display: block;
     }
     .openMenu.down {
         background-color: #004d88;
