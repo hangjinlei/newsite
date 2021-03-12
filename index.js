@@ -8,10 +8,6 @@ window.onresize = function() {
 }
 
 function menu() {
-    if (window.innerWidth < 200) {
-        alert("屏幕尺寸过窄，菜单可能无法完全显示!");
-        return;
-    }
     var menu = document.getElementById("menu");
     var openMenu = document.getElementById("openMenu");
     if (menu.className == "menu")
