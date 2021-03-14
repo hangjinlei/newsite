@@ -45,13 +45,13 @@ function setMars() {
 
 function setCopyright() {
     var copyright = document.getElementById("copyright");
-    var copy = "Copyright © " + new Date().getFullYear() + " 杭金雷";
+    var copy = "Copyright © " + new Date().getFullYear() + " 金雷 杭";
     copyright.innerHTML = copy;
     copyright.setAttribute("title", copy);
 }
 
 function setTitle() {
-    document.getElementById("openMenu").setAttribute("title", "导航");
+    document.getElementById("openMenu").setAttribute("title", "Launcher");
     document.getElementById("title").setAttribute("title", "金雷 杭");
     document.getElementById("headpic").setAttribute("title", "金雷 杭");
 }

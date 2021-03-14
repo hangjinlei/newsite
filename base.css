@@ -118,9 +118,6 @@ footer:hover {
 .content {
     width: 100%;
     background-color: #F3F2F1;
-    /* background-image: url(images/Forever\ Love.jpg);
-    background-repeat: repeat;
-    background-size: contain; */
 }
 
 header .openMenu {
@@ -145,7 +142,7 @@ header .openMenu svg:hover {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all .1s;
+    /* transition: all .1s; */
 }
 
 
@@ -196,26 +193,11 @@ header .openMenu svg:hover {
     .page {
         display: none;
     }
-    #index #menuList #index {
-        color: #0078D4;
-        background-color: #F3F2F1;
-    }
-    #bing #menuList #bing {
-        color: #0078D4;
-        background-color: #F3F2F1;
-    }
-    #video #menuList #video {
-        color: #0078D4;
-        background-color: #F3F2F1;
-    }
-    #music #menuList #music {
-        color: #0078D4;
-        background-color: #F3F2F1;
-    }
-    #about #menuList #about {
-        color: #0078D4;
-        background-color: #F3F2F1;
-    }
+    #index #menuList #index,
+    #bing #menuList #bing,
+    #video #menuList #video,
+    #music #menuList #music,
+    #about #menuList #about,
     #mars2020 #menuList #mars2020 {
         color: #0078D4;
         background-color: #F3F2F1;
@@ -249,10 +231,13 @@ header .openMenu svg:hover {
         display: none;
     }
     footer {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
     }
-    .nowTime {
-        display: none;
+    footer * {
+        height: 25px;
+        line-height: 25px;
     }
 }
 
@@ -270,21 +255,11 @@ header .openMenu svg:hover {
     .page a:hover {
         cursor: pointer;
     }
-    #index .page #index {
-        display: block;
-    }
-    #bing .page #bing {
-        display: block;
-    }
-    #video .page #video {
-        display: block;
-    }
-    #music .page #music {
-        display: block;
-    }
-    #about .page #about {
-        display: block;
-    }
+    #index .page #index,
+    #bing .page #bing,
+    #video .page #video,
+    #music .page #music,
+    #about .page #about,
     #mars2020 .page #mars2020 {
         display: block;
     }
@@ -294,6 +269,10 @@ header .openMenu svg:hover {
     }
     .content {
         background: linear-gradient(green, yellow);
+        background-image: url(images/Forever\ Love.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
     .menu.show {
         top: 50px;
