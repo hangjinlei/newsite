@@ -3,6 +3,10 @@
 * {
     padding: o;
     margin: 0;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-family: 'Microsoft Yahei', 'Times New Roman', Times, serif;
 }
 
@@ -56,6 +60,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    top: 0;
     width: 100%;
     height: 50px;
     font-weight: bold;
@@ -72,11 +77,13 @@ header>* {
 header .title {
     flex: 1;
     text-align: center;
+    cursor: default;
 }
 
 header .headpic {
     width: 50px;
     transition: all .5s;
+    border-radius: 50%;
 }
 
 header .headpic:hover {
@@ -86,6 +93,26 @@ header .headpic:hover {
 
 header .headpic img {
     width: 100%;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #0078D4;
+}
+
+footer>* {
+    height: 50px;
+    line-height: 50px;
+}
+
+footer:hover {
+    cursor: default;
 }
 
 .content {
@@ -98,6 +125,7 @@ header .headpic img {
 
 header .openMenu {
     width: 50px;
+    transition: all .1s;
 }
 
 header .openMenu svg {
@@ -165,7 +193,14 @@ header .openMenu svg:hover {
 /* 小于600px */
 
 @media screen and (max-width: 600px) {
+    .page {
+        display: none;
+    }
     #index #menuList #index {
+        color: #0078D4;
+        background-color: #F3F2F1;
+    }
+    #bing #menuList #bing {
         color: #0078D4;
         background-color: #F3F2F1;
     }
@@ -184,21 +219,6 @@ header .openMenu svg:hover {
     #mars2020 #menuList #mars2020 {
         color: #0078D4;
         background-color: #F3F2F1;
-    }
-    .page {
-        display: none;
-    }
-    .page {
-        display: none;
-    }
-    .page {
-        display: none;
-    }
-    .page {
-        display: none;
-    }
-    .page {
-        display: none;
     }
     .menu.show {
         top: 0;
@@ -228,6 +248,12 @@ header .openMenu svg:hover {
     .menuList a img {
         display: none;
     }
+    footer {
+        justify-content: center;
+    }
+    .nowTime {
+        display: none;
+    }
 }
 
 
@@ -236,7 +262,8 @@ header .openMenu svg:hover {
 @media screen and (min-width: 600px) {
     .page a {
         display: none;
-        width: 200px;
+        width: auto;
+        margin: 0 0 0 30px;
         text-align: center;
         color: #fff;
     }
@@ -244,6 +271,9 @@ header .openMenu svg:hover {
         cursor: pointer;
     }
     #index .page #index {
+        display: block;
+    }
+    #bing .page #bing {
         display: block;
     }
     #video .page #video {
@@ -260,6 +290,10 @@ header .openMenu svg:hover {
     }
     .openMenu.down {
         background-color: #004d88;
+        transform: rotate(90deg);
+    }
+    .content {
+        background: linear-gradient(green, yellow);
     }
     .menu.show {
         top: 50px;
@@ -284,6 +318,7 @@ header .openMenu svg:hover {
         margin: 10px;
         width: 100px;
         height: 100px;
+        border-radius: 10%;
     }
     .menuList a:hover {
         transform: scale(1.1);
@@ -291,5 +326,11 @@ header .openMenu svg:hover {
     .menuList a img {
         width: 50px;
         height: 50px;
+    }
+    footer {
+        justify-content: space-between;
+    }
+    footer>* {
+        margin: 0 30px;
     }
 }
