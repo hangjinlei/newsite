@@ -42,7 +42,7 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'Roboto', 'Noto_Sans_SC', 'Microsoft Yahei', 'Times New Roman', Times, serif;
+    font-family: 'Roboto', 'Noto_Sans_JP', 'Noto_Sans_SC', 'Noto_Sans_TC', 'Noto_Sans_HK', 'Microsoft Yahei', 'Times New Roman', Times, serif;
 }
 
 .clearfix:before,
