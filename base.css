@@ -1,5 +1,40 @@
 /* 全局配置 */
 
+@font-face {
+    font-family: "Roboto";
+    src: url(res/Google_Fonts/Roboto/Roboto-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto_Sans_JP";
+    src: url(res/Google_Fonts/Japanese/Noto_Sans_JP/NotoSansJP-Regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto_Sans_SC";
+    src: url(res/Google_Fonts/Chinese_Simplified/Noto_Sans_SC/NotoSansSC-Regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto_Sans_TC";
+    src: url(res/Google_Fonts/Chinese_Traditional/Noto_Sans_TC/NotoSansTC-Regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto_Sans_HK";
+    src: url(res/Google_Fonts/Chinese_Hong_Kong/Noto_Sans_HK/NotoSansHK-Regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
 * {
     padding: o;
     margin: 0;
@@ -7,7 +42,7 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'Microsoft Yahei', 'Times New Roman', Times, serif;
+    font-family: 'Roboto', 'Noto_Sans_SC', 'Microsoft Yahei', 'Times New Roman', Times, serif;
 }
 
 .clearfix:before,
@@ -63,7 +98,6 @@ header {
     top: 0;
     width: 100%;
     height: 50px;
-    font-weight: bold;
     font-size: 24px;
     color: #fff;
     background-color: #0078D4;
