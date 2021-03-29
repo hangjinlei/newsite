@@ -31,40 +31,80 @@
                 <a id="about" href="pages/about.html">about</a>
                 <a id="mars2020" href="pages/mars2020.html">mars2020</a>
             </div>
-            <div id="title" class="title">
-                金雷 杭
-            </div>
+            <div id="title" class="title"></div>
             <div id="headpic" class="headpic">
                 <img src="images/logo.png" alt="杭金雷">
             </div>
         </header>
-        <div id="content" class="content" onclick="hideMenuList();">
-            <!-- <iframe width="100%" height="100%" src="https://bing.com" frameborder="0"></iframe> -->
-            <!-- <iframe width="980" height="410" src="https://mars.nasa.gov/layout/embed/send-your-name/future/certificate/?cn=143825959840" frameborder="0"></iframe> -->
-        </div>
+        <div id="content" class="content"></div>
         <footer>
             <div id="copyright" class="copyright">Copyright © 2020 杭金雷</div>
             <div id="nowTime" class="nowTime"></div>
         </footer>
     </div>
     <div id="menu" class="menu">
-        <div id="hideMenu" class="hideMenu" onclick="menu();">
-            <svg viewBox="0 0 100 100" width="50" height="50">
-                <rect x="20" y="25" width="60" height="10"></rect>
-                <rect x="20" y="45" width="60" height="10"></rect>
-                <rect x="20" y="65" width="60" height="10"></rect>
-            </svg>
+        <div class="menuheader">
+            <div id="hideMenu" class="hideMenu" onclick="menu();">
+                <svg viewBox="0 0 100 100" width="50" height="50">
+                    <rect x="20" y="25" width="60" height="10"></rect>
+                    <rect x="20" y="45" width="60" height="10"></rect>
+                    <rect x="20" y="65" width="60" height="10"></rect>
+                </svg>
+            </div>
         </div>
         <div id="menuList" class="menuList">
-            <a id="index" href="index.html"><img src="images/logo.png" alt="index">index</a>
-            <a id="bing" href="pages/bing.html"><img src="images/logo.png" alt="bing">bing</a>
-            <a id="video" href="pages/video.html"><img src="images/video.png" alt="video">video</a>
-            <a id="music" href="pages/music.html"><img src="images/music.png" alt="music">music</a>
-            <a id="about" href="pages/about.html"><img src="images/logo.png" alt="About">about</a>
-            <a id="mars2020" href="pages/mars2020.html"><img src="images/logo.png" alt="mars2020">mars2020</a>
-            <a id="index" href="index.html"><img src="images/logo.png" alt="index">index</a>
+            <a id="index" href="index.html">index</a>
+            <a id="bing" href="pages/bing.html">bing</a>
+            <a id="video" href="pages/video.html">video</a>
+            <a id="music" href="pages/music.html">music</a>
+            <a id="about" href="pages/about.html">about</a>
+            <a id="mars2020" href="pages/mars2020.html">mars2020</a>
+            <a id="index" href="index.html">index</a>
         </div>
     </div>
+    <div id="mask" class="mask" onclick="hideMenuList();"></div>
+
+
+    <div id="rightContextMenu" class="rightContextMenu">
+        <div class="contextMenu">
+            你好
+        </div>
+    </div>
+    <script>
+        // 屏蔽系统右键
+        document.getElementById('container').oncontextmenu = function(e) {
+            e.preventDefault();
+        };
+        document.getElementById('menu').oncontextmenu = function(e) {
+            e.preventDefault();
+        };
+        document.getElementById('mask').oncontextmenu = function(e) {
+            e.preventDefault();
+        };
+        document.getElementById('container').addEventListener('contextmenu', btnRightPress);
+        // document.getElementsByTagName('body')[0].addEventListener('contextmenu', btnRightPress);
+
+        function btnRightPress(e) {
+            console.log(e);
+            // console.log('鼠标右击了');
+            var rightContextMenu = document.getElementById('rightContextMenu'); // 右键菜单
+            var mask = document.getElementById('mask'); // 遮罩
+            var innerWidth = window.innerWidth;
+            var innerHeight = window.innerHeight;
+            if (e.clientX + 100 > innerWidth) {
+                rightContextMenu.style.left = e.clientX - 100 + 'px';
+            } else {
+                rightContextMenu.style.left = e.clientX + 'px';
+            }
+            if (e.clientY + 100 > innerHeight) {
+                rightContextMenu.style.top = e.clientY - 120 + 'px';
+            } else {
+                rightContextMenu.style.top = e.clientY - 20 + 'px';
+            }
+            rightContextMenu.className = ('rightContextMenu show');
+            mask.className = ('mask show');
+        }
+    </script>
 </body>
 
 </html>

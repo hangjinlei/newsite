@@ -3,21 +3,22 @@ window.onload = function() {
     setContent();
     setCopyright();
     setTitle();
-    setMars();
+    setInnerHTML();
+    // setMars();
 }
 
 window.onresize = function() {
     setContent();
-    setMars()
+    // setMars()
 }
 
 function menu() {
     var menu = document.getElementById("menu");
-    var openMenu = document.getElementById("openMenu");
+    var mask = document.getElementById("mask");
     if (menu.className == "menu")
-        showMenuList(menu, openMenu);
+        showMenuList(menu, mask);
     else
-        hideMenuList(menu, openMenu);
+        hideMenuList(menu, mask);
 }
 
 function setContent() {
@@ -26,16 +27,18 @@ function setContent() {
     content.style.height = innerHeight - 100 + "px";
 }
 
-function showMenuList(menu, openMenu) {
+function showMenuList(menu, mask) {
     menu.className = "menu show";
-    openMenu.className = "openMenu down";
+    mask.className = "mask show";
 }
 
-function hideMenuList(menu, openMenu) {
+function hideMenuList(menu, mask) {
     var menu = document.getElementById("menu");
-    var openMenu = document.getElementById("openMenu");
+    var mask = document.getElementById("mask");
+    var rightContextMenu = document.getElementById("rightContextMenu");
     menu.className = "menu";
-    openMenu.className = "openMenu";
+    mask.className = "mask";
+    rightContextMenu.className = "rightContextMenu";
 }
 
 function setMars() {
@@ -45,15 +48,21 @@ function setMars() {
 
 function setCopyright() {
     var copyright = document.getElementById("copyright");
-    var copy = "Copyright © " + new Date().getFullYear() + " 金雷 杭";
+    var copy = "Copyright &copy; " + new Date().getFullYear() + " 金雷 杭";
     copyright.innerHTML = copy;
     copyright.setAttribute("title", copy);
 }
 
 function setTitle() {
     document.getElementById("openMenu").setAttribute("title", "Launcher");
+    document.getElementById("hideMenu").setAttribute("title", "Launcher");
     document.getElementById("title").setAttribute("title", "金雷 杭");
     document.getElementById("headpic").setAttribute("title", "金雷 杭");
+}
+
+function setInnerHTML() {
+    var d = document.getElementById("title"); //.setAttribute("title", "Launcher");
+    d.innerHTML = "金雷 杭";
 }
 
 (function() {
