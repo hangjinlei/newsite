@@ -36,7 +36,7 @@
 }
 
 * {
-    padding: o;
+    padding: 0;
     margin: 0;
     text-transform: capitalize;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -264,7 +264,8 @@ header .openMenu svg:hover {
 #video #menuList #video,
 #music #menuList #music,
 #about #menuList #about,
-#mars2020 #menuList #mars2020 {
+#mars2020 #menuList #mars2020,
+#NewGuid #menuList #NewGuid {
     color: #0078D4;
     background-color: #F3F2F1;
 }
@@ -315,7 +316,8 @@ header .openMenu svg:hover {
     #video .page #video,
     #music .page #music,
     #about .page #about,
-    #mars2020 .page #mars2020 {
+    #mars2020 .page #mars2020,
+    #NewGuid .page #NewGuid {
         display: block;
     }
     .content {

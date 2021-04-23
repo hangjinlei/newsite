@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate a NewGuid</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../base.css">
+    <script src="../base.js"></script>
+    <script src="NewGuid.js"></script>
+</head>
+
+<body id="NewGuid">
+    <div id="container" class="container">
+        <header>
+            <div id="openMenu" class="openMenu" onclick="menu();">
+                <svg viewBox="0 0 100 100" width="50" height="50">
+                    <rect x="20" y="25" width="60" height="10"></rect>
+                    <rect x="20" y="45" width="60" height="10"></rect>
+                    <rect x="20" y="65" width="60" height="10"></rect>
+                </svg>
+            </div>
+            <div class="page">
+                <a id="index" href="../index.html">index</a>
+                <a id="bing" href="bing.html">bing</a>
+                <a id="video" href="video.html">video</a>
+                <a id="music" href="music.html">music</a>
+                <a id="about" href="about.html">about</a>
+                <a id="mars2020" href="mars2020.html">mars2020</a>
+                <a id="NewGuid" href="NewGuid.html">Generate a NewGuid</a>
+            </div>
+            <div id="title" class="title"></div>
+            <div id="headpic" class="headpic">
+                <img src="../images/logo.png" alt="杭金雷">
+            </div>
+        </header>
+        <div id="content" class="content">
+            <div id="Guid1"></div>
+            <div id="Guid2"></div>
+            <div id="Guid3"></div>
+            <div id="Guid4"></div>
+        </div>
+        <footer>
+            <div id="copyright" class="copyright">Copyright © 2020 杭金雷</div>
+            <div id="nowTime" class="nowTime"></div>
+        </footer>
+    </div>
+    <div id="menu" class="menu">
+        <div class="menuheader">
+            <div id="hideMenu" class="hideMenu" onclick="menu();">
+                <svg viewBox="0 0 100 100" width="50" height="50">
+                    <rect x="20" y="25" width="60" height="10"></rect>
+                    <rect x="20" y="45" width="60" height="10"></rect>
+                    <rect x="20" y="65" width="60" height="10"></rect>
+                </svg>
+            </div>
+        </div>
+        <div id="menuList" class="menuList">
+            <a id="index" href="../index.html">index</a>
+            <a id="bing" href="bing.html">bing</a>
+            <a id="video" href="video.html">video</a>
+            <a id="music" href="music.html">music</a>
+            <a id="about" href="about.html">about</a>
+            <a id="mars2020" href="mars2020.html">mars2020</a>
+            <a id="NewGuid" href="NewGuid.html">Generate a NewGuid</a>
+        </div>
+    </div>
+    <div id="mask" class="mask" onclick="hideMenuList();"></div>
+
+</body>
+
+</html>
